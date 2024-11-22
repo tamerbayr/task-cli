@@ -1,25 +1,39 @@
 # task-cli
-A simple task list runs on Python terminal.
+A simple task list that runs on the Python terminal.
 
-A beginner project I made using guidelines on https://roadmap.sh/projects/task-tracker
+This is a beginner project I created using the guidelines from [roadmap.sh's Task Tracker Project](https://roadmap.sh/projects/task-tracker).
 
-# How to use
-!IMPORTANT - always use "exit" command to exit or all of your changes will be lost.
+## How to use
+**IMPORTANT:** Always use the `exit` command to exit; otherwise, all of your changes will be lost.
 
-run main.py or task-cli.exe standalone executable. Use commands to make changes on your task list. The program will keep all of your data in tasklist.json file, which will be created in the same directory after you exit the program for the first time.
+Run `main.py` or the standalone executable `task-cli.exe`. Use the provided commands to manage your task list. The program saves all data to `tasklist.json`, which will be created in the same directory after you exit the program for the first time.
 
-Each task has following attributes:
-1- priority: accepts any integer. default is 0
-2- progress: progress of your task. Accepts only the following: 0=ToDo, 1=in-progress, 2=done. default is 0. You can use the numbers or keywords while using the program.
-3- data: description of your task. Accepts anything.
-4- create time: creation time of your task. Assigned automatically.
-5- uptade tine: last uptade time of your task. Assigned automatically.
+Each task has the following attributes:
+1. **Priority**: Accepts any integer. Default is `0`.
+2. **Progress**: Indicates the progress of your task. Accepts only the following values:
+   - `0`: ToDo
+   - `1`: In Progress
+   - `2`: Done  
+   Default is `0`. You can use either numbers or keywords (e.g., "todo", "in-progress", "done") when interacting with the program.
+3. **Data**: Description of your task. Accepts any string.
+4. **Creation Time**: Automatically assigned when a task is created.
+5. **Update Time**: Automatically assigned when a task is updated.
 
-# commands
-<b>add</b> `priority` `progress` `data` - adds a new task. at least data must be specified. Assumes 1st argument is priority if only 2 arguments are given. <br>
-<b>delete</b> `index` <br>
-<b>display</b> - displays your tasklist <br>
-<b>display</b> `priority` - displays tasks that has the specified progress <br>
-<b>update</b> `index` `field (priority/progress/data)` `new_value` <br>
-<b>exit</b> - save and exit. always use this when you're done. <br>
+## Commands
+- **add** `priority` `progress` `data`  
+  Adds a new task. At least the `data` field must be specified. If only two arguments are given, the program assumes the first argument is `priority`.
+  
+- **delete** `index`  
+  Deletes the task at the specified index.
 
+- **display**  
+  Displays your entire task list.
+  
+- **display** `priority`  
+  Displays tasks with the specified `priority`.
+
+- **update** `index` `field (priority/progress/data)` `new_value`  
+  Updates a specific field of a task with a new value.
+
+- **exit**  
+  Saves and exits the program. Always use this when you're done to ensure your changes are saved.
